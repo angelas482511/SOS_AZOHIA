@@ -1,0 +1,43 @@
+/* Estilos personalizados para la cabecera */
+
+.navbar {
+    padding: 0.5rem 2rem; /* Espaciado interno de la barra */
+    background-color: #ffffff !important;
+}
+
+/* Ajustamos el contenedor del logo */
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 100px;   /* Ajusta este valor según tu gusto */
+    height: auto;
+    margin-right: 15px;
+    /* Esto ayuda si la imagen tiene mucho borde blanco */
+    object-fit: contain; 
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Alineación de la derecha */
+.nav-derecha-grupo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Todo a la derecha */
+}
+
+.carrito-link {
+    font-size: 1.8rem;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: -5px; /* Sube un poco el carrito para pegarlo al menú */
+}
+
+
