@@ -13,7 +13,7 @@ Gestión de noticias: publicación y administración de contenidos informativos
 Autenticación: sistema de login para el área de administración
 Página institucional: sección "Quiénes somos" con información sobre el proyecto
 
-Tecnologías
+Tecnologías:
 Backend: PHP
 Base de datos: MySQL
 Frontend: HTML, CSS
