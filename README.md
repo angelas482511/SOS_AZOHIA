@@ -1,24 +1,48 @@
 SOS La Azohía
 
-Aplicación web desarrollada como Proyecto de Fin de Grado (Técnico Superior en Desarrollo de Aplicaciones Web, CESUR, 2026).
+Aplicación web para la asociación **SOS La Azohía**, dedicada a la protección del litoral de la Región de Murcia. Proyecto de fin de ciclo del Técnico Superior en Desarrollo de Aplicaciones Web (CESUR, 2026).
 
-Descripción
-
-Plataforma web para una asociación ficticia/local centrada en la recogida de donaciones, con gestión de contenidos y panel de administración propio.
+Los visitantes pueden informarse de las noticias de la asociación y colaborar con donaciones a través de una tienda solidaria. La asociación gestiona el contenido de forma autónoma desde un panel de administración.
 
 Funcionalidades
-Sistema de donaciones: catálogo de productos/artículos con carrito de compra y pasarela de pago (simulada)
-Panel de administración: gestión de productos, donaciones y noticias (crear, editar, eliminar)
-Gestión de noticias: publicación y administración de contenidos informativos
-Autenticación: sistema de login para el área de administración
-Página institucional: sección "Quiénes somos" con información sobre el proyecto
 
-Tecnologías:
-Backend: PHP
-Base de datos: MySQL
-Frontend: HTML, CSS
+- **Noticias:** listado público y gestión desde administración (crear, modificar y eliminar).
+- **Tienda solidaria:** catálogo de productos con gestión desde administración (crear, modificar y eliminar).
+- **Carrito de donaciones:** añadir y quitar productos y vaciar el carrito. Es un proyecto académico: no se procesan pagos reales.
+- **Página "Quiénes somos"** editable desde administración.
+- **Panel de administración** con login para gestionar noticias, productos e información de la asociación.
+- **Diseño responsive** con Bootstrap.
 
-Autora: Ángela Vega y Natividad Alarcos
+Tecnologías
 
-Nota:
-Proyecto académico. La pasarela de pago es una simulación y no procesa transacciones reales.
+PHP (PDO) · MySQL · Bootstrap · HTML/CSS · JavaScript
+
+Estructura
+
+```
+├── index.php, tienda.php, donacion.php, quienes_somos.php   # páginas públicas
+├── login.php, administracion*.php, editar_informacion.php   # panel de administración
+├── nueva_/modificar_/eliminar_noticia.php                   # gestión de noticias
+├── nuevo_/modificar_/eliminar_producto.php                  # gestión de productos
+├── añadir_donacion.php, eliminar_donacion_item.php,
+│   vaciar_donacion.php                                      # carrito de donaciones
+├── conexion.php, funciones.php                              # conexión a la base de datos y utilidades
+├── insert_info.sql, insert_noticias.sql                     # datos iniciales
+├── css/
+└── uploads/                                                 # imágenes y vídeo
+```
+
+Cómo ejecutarlo en local
+
+1. Instala un entorno con PHP y MySQL (por ejemplo XAMPP) y arranca Apache y MySQL.
+2. Copia el proyecto en la carpeta del servidor (`htdocs` en XAMPP).
+3. Crea en MySQL una base de datos vacía llamada `proyecto2025` con codificación `utf8mb4`.
+4. Abre `http://localhost/<carpeta-del-proyecto>/` en el navegador. Al cargar, `conexion.php` crea automáticamente las tablas (`users`, `noticias`, `productos` e `informacion`) y un usuario administrador inicial.
+5. Opcional: importa `insert_info.sql` e `insert_noticias.sql` para cargar contenido de ejemplo.
+
+La conexión usa los valores por defecto de XAMPP. Si tu MySQL es distinto, cámbialos en `conexion.php`.
+
+
+Autoría
+
+Ángela Vega Sánchez y Natividad Alarcos.
